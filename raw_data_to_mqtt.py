@@ -149,7 +149,8 @@ def on_message(client, userdata, msg):
             else:
                 print("❓ Device tidak dikenali:", device_side)
                 return
-            save_punch_type(device_id, punch_type)
+            if punch_type != "NO PUNCH":
+                save_punch_type(device_id, punch_type)
 
         else:
             print("❓ Topik tidak dikenali:", topic)
